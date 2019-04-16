@@ -23,21 +23,21 @@
 
 
     <select id="selectCount" resultMap="BaseResultMap">
-        select count(1) from T_CODE_GEN_PARAMS t
+        select count(1) from t_code_gen_params t
         <where>
             <include refid="select_content"/>
         </where>
     </select>
 
     <select id="selectList" resultMap="BaseResultMap">
-        select * from T_CODE_GEN_PARAMS t
+        select * from t_code_gen_params t
         <where>
             <include refid="select_content"/>
         </where>
     </select>
 
     <select id="selectPage" resultMap="BaseResultMap">
-        select * from T_CODE_GEN_PARAMS t
+        select * from t_code_gen_params t
         <where>
             <include refid="select_content"/>
             ${w.sqlSegment}

@@ -46,7 +46,7 @@
     </select>
 
     <select id="selectPage" resultMap="BaseResultMap">
-        select * from T_CODE_TABLE_FIELD_VERIFICATION t
+        select * from t_code_table_field_verification t
         <where>
             <include refid="select_content"/>
             ${w.sqlSegment}

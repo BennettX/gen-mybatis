@@ -13,7 +13,7 @@
     </resultMap>
     <insert id="batchInsert">
         <if test="_databaseType == 'MYSQL'">
-            INSERT INTO T_CODE_TABLE_SERVICE_CONFIG
+            INSERT INTO t_code_table_service_config
             (TABLE_ID, TYPE, IS_ENABLE, IS_PERMISSION, IS_TRANSACTIONAL, TRANSACTIONAL_TYPE)
             VALUES
             <foreach collection="list" item="s" separator=",">
@@ -24,21 +24,21 @@
 
 
     <select id="selectCount" resultMap="BaseResultMap">
-        select count(1) from T_CODE_TABLE_SERVICE_CONFIG t
+        select count(1) from t_code_table_service_config t
         <where>
             <include refid="select_content"/>
         </where>
     </select>
 
     <select id="selectList" resultMap="BaseResultMap">
-        select * from T_CODE_TABLE_SERVICE_CONFIG t
+        select * from t_code_table_service_config t
         <where>
             <include refid="select_content"/>
         </where>
     </select>
 
     <select id="selectPage" resultMap="BaseResultMap">
-        select * from T_CODE_TABLE_SERVICE_CONFIG t
+        select * from t_code_table_service_config t
         <where>
             <include refid="select_content"/>
             ${w.sqlSegment}

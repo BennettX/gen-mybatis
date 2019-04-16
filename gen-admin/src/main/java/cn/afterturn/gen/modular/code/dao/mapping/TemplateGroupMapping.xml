@@ -15,26 +15,26 @@
         <result column="MDF_TIME" property="mdfTime"/>
     </resultMap>
     <update id="share">
-        UPDATE t_code_template_GROUP set share_status = 2 WHERE id = #{id}
+        UPDATE t_code_template_group set share_status = 2 WHERE id = #{id}
     </update>
 
 
     <select id="selectCount" resultMap="BaseResultMap">
-        select count(1) from t_code_template_GROUP t
+        select count(1) from t_code_template_group t
         <where>
             <include refid="select_content"/>
         </where>
     </select>
 
     <select id="selectList" resultMap="BaseResultMap">
-        select * from t_code_template_GROUP t
+        select * from t_code_template_group t
         <where>
             <include refid="select_content"/>
         </where>
     </select>
 
     <select id="selectPage" resultMap="BaseResultMap">
-        select * from t_code_template_GROUP t
+        select * from t_code_template_group t
         <where>
             <include refid="select_content"/>
             ${w.sqlSegment}

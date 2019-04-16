@@ -12,29 +12,29 @@
         <result column="MDF_TIME" property="mdfTime"/>
     </resultMap>
     <update id="updateTemplateId">
-        UPDATE T_CODE_TEMPLATE_FILE SET file = #{e.file} ,file_type = #{e.fileType} WHERE TEMPLATE_ID = #{e.templateId}
+        UPDATE t_code_template_file SET file = #{e.file} ,file_type = #{e.fileType} WHERE TEMPLATE_ID = #{e.templateId}
     </update>
     <delete id="deleteByTemplateId">
-        DELETE FROM T_CODE_TEMPLATE_FILE WHERE TEMPLATE_ID = #{id}
+        DELETE FROM t_code_template_file WHERE TEMPLATE_ID = #{id}
     </delete>
 
 
     <select id="selectCount" resultMap="BaseResultMap">
-        select count(1) from T_CODE_TEMPLATE_FILE t
+        select count(1) from t_code_template_file t
         <where>
             <include refid="select_content"/>
         </where>
     </select>
 
     <select id="selectList" resultMap="BaseResultMap">
-        select * from T_CODE_TEMPLATE_FILE t
+        select * from t_code_template_file t
         <where>
             <include refid="select_content"/>
         </where>
     </select>
 
     <select id="selectPage" resultMap="BaseResultMap">
-        select * from T_CODE_TEMPLATE_FILE t
+        select * from t_code_template_file t
         <where>
             <include refid="select_content"/>
             ${w.sqlSegment}
